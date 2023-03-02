@@ -103,14 +103,16 @@ let personInfoTwo = `I am ${fullName}. I am ${age}. I live in ${country}.`; //ES
 
 **Строковые Методы**
 
-_length_: Метод строки length возвращает количество символов в строке, включая пустое пространство.  
+
+* _length_  
+(возвращает количество символов в строке, включая пустое пространство)
 
 ````
 let firstName = "Asabeneh";
 console.log(firstName.length);
 ````
 
-_Доступ к символам в строке_
+* _Доступ к символам в строке_
 
 ````
 let string = "JavaScript";
@@ -119,27 +121,29 @@ console.log(lastIndex); // 9
 console.log(string[lastIndex]); // t
 ````
 
-_toUpperCase()_
+* _toUpperCase()_
 
 ````
 let string = "JavaScript";
 console.log(string.toUpperCase()); // JAVASCRIPT
 ````
 
-_toLowerCase()_
+* _toLowerCase()_
 
 ````
 console.log(string.toLowerCase()); // javascript
 ````
 
-_substr()_(Требуется два аргумента: начальный индекс и количество символов для нарезки)
+* _substr()_  
+(Требуется два аргумента: начальный индекс и количество символов для нарезки)
 
 ````
 let string = "JavaScript";
 console.log(string.substr(4, 6)); // Script (от 4го отрезать 6 символов)
 ````
 
-_substring()_(Он принимает два аргумента: начальный индекс и индекс остановки, но он не включает индекс остановки)
+* _substring()_  
+(Он принимает два аргумента: начальный индекс и индекс остановки, но он не включает индекс остановки)
 
 ````
 let string = "JavaScript";
@@ -148,7 +152,8 @@ console.log(string.substring(4, 10)); // Script
 console.log(string.substring(4)); // Script
 ````
 
-_split()_(разделяет строку в указанном месте)
+* _split()_  
+(разделяет строку в указанном месте)
 
 ````
 let string = "30 Days Of JavaScript";
@@ -167,14 +172,16 @@ console.log(countries.split(",")); // ["Finland", " Sweden", " Norway", " Denmar
 console.log(countries.split(", ")); //  ["Finland", "Sweden", "Norway", "Denmark", "and Iceland"]
 ````
 
-_trim()_(Удаляет пробелы в начале или конце строки)
+* _trim()_  
+(Удаляет пробелы в начале или конце строки)
 
 ````
 let string = "   30 Days Of JavaScript   ";
 console.log(string.trim(" ")); // 30 Days Of JavasCript
 ````
 
-_includes()_(Он проверяет, существует ли подстрока в строке, и возвращает true, если она существует, и false, если она не существует)
+* _includes()_  
+(Он проверяет, существует ли подстрока в строке, и возвращает true, если она существует, и false, если она не существует)
 
 ````
 let country = "Finland";
@@ -185,28 +192,32 @@ console.log(country.includes("land")); // true
 console.log(country.includes("Land")); // false
 ````
 
-_replace()_(принимает к параметру старую подстроку и новую подстроку)
+* _replace()_  
+(принимает к параметру старую подстроку и новую подстроку)
 
 ````
 let string = "30 Days Of JavaScript";
 console.log(string.replace("JavaScript", "Python")); // 30 Days Of Python
 ````
 
-_charAt()_(принимает индекс и возвращает значение по этому индексу)
+* _charAt()_  
+(принимает индекс и возвращает значение по этому индексу)
 
 ````
 let string = "30 Days Of JavaScript";
 console.log(string.charAt(0)); // 3
 ````
 
-_charCodeAt()_(Принимает индекс и возвращает код символа (номер ASCII) значения по этому индексу)
+* _charCodeAt()_  
+(Принимает индекс и возвращает код символа (номер ASCII) значения по этому индексу)
 
 ````
 let string = "30 Days Of JavaScript";
 console.log(string.charCodeAt(3)); // D ASCII number is 51
 ````
 
-_indexOf()_(Принимает подстроку, и если подстрока существует в строке, она возвращает первую позицию подстроки, если не существует, она возвращает -1)
+* _indexOf()_  
+(Принимает подстроку, и если подстрока существует в строке, она возвращает первую позицию подстроки, если не существует, она возвращает -1)
 
 ````
 let string = "30 Days Of JavaScript";
@@ -217,7 +228,8 @@ console.log(string.indexOf("days")); // -1
 console.log(string.indexOf("a")); // 4
 ````
 
-_lastIndexOf()_(Принимает подстроку, и если подстрока существует в строке, она возвращает последнюю позицию подстроки, если она не существует, она возвращает -1)
+* _lastIndexOf()_  
+(Принимает подстроку, и если подстрока существует в строке, она возвращает последнюю позицию подстроки, если она не существует, она возвращает -1)
 
 ````
 let string =
@@ -228,14 +240,16 @@ console.log(string.lastIndexOf("you")); // 63
 console.log(string.lastIndexOf("JavaScript")); // 38
 ````
 
-_concat()_(он принимает множество подстрок и конкатенирует их)
+* _concat()_  
+(он принимает множество подстрок и конкатенирует их)
 
 ````
 let string = "30";
 console.log(string.concat("Days", "Of", "JavaScript")); // 30DaysOfJavaScript
 ````
 
-_startsWith_(он принимает подстроку в качестве аргумента и проверяет, начинается ли строка с указанной подстроки. Возвращает логическое значение (true или false).)
+* _startsWith_  
+(он принимает подстроку в качестве аргумента и проверяет, начинается ли строка с указанной подстроки. Возвращает логическое значение (true или false).)
 
 ````
 let string = "Love is the best to in this world";
@@ -245,7 +259,8 @@ console.log(string.startsWith("love")); // false
 console.log(string.startsWith("world")); // false
 ````
 
-_endsWith_(он принимает подстроку в качестве аргумента и проверяет, заканчивается ли строка указанной подстрокой. Возвращает логическое значение (true или false))
+* _endsWith_  
+(он принимает подстроку в качестве аргумента и проверяет, заканчивается ли строка указанной подстрокой. Возвращает логическое значение (true или false))
 
 ````
 let string = "Love is the best to in this world";
@@ -255,7 +270,8 @@ console.log(string.endsWith("love")); // false
 console.log(string.endsWith("in this world")); // true
 ````
 
-_search_(он принимает подстроку в качестве аргумента и возвращает индекс первого совпадения)
+* _search_  
+(он принимает подстроку в качестве аргумента и возвращает индекс первого совпадения)
 
 ````
 let string =
@@ -263,7 +279,8 @@ let string =
 console.log(string.search("love")); // 2
 ````
 
-_match_(он принимает подстроку или шаблон регулярного выражения в качестве аргумента и возвращает массив, если есть совпадение, если нет, то возвращает ноль. Давайте посмотрим, как выглядит шаблон регулярного выражения. Он начинается с / знака и заканчивается / знаком)
+* _match_  
+(он принимает подстроку или шаблон регулярного выражения в качестве аргумента и возвращает массив, если есть совпадение, если нет, то возвращает ноль. Давайте посмотрим, как выглядит шаблон регулярного выражения. Он начинается с / знака и заканчивается / знаком)
 
 ````
 let string = "love";
@@ -294,7 +311,7 @@ console.log(txt.match(regEx)); // ["2", "0", "1", "9", "3", "0", "2", "0", "2", 
 console.log(txt.match(/\d+/g)); // ["2019", "30", "2020"]
 ````
 
-_repeat()_
+* _repeat()_
 
 ````
 let string = "love";
