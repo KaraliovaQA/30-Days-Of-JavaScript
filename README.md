@@ -78,6 +78,22 @@ let randomNumRoundToFloor = Math.floor(numBtnZeroAndTen);
 console.log(randomNumRoundToFloor); // это даёт от 0 до 10
 ````
 
+````
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+}
+````
+
+````
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
+}
+````
+
 **Конкатенация строк**
 
 ````
@@ -135,7 +151,7 @@ console.log(string.toLowerCase()); // javascript
 ````
 
 * _substr()_  
-(Требуется два аргумента: начальный индекс и количество символов для нарезки)
+(Требуется два аргумента: начальный индекс и количество символов для нарезки, устарело)
 
 ````
 let string = "JavaScript";
@@ -316,4 +332,78 @@ console.log(txt.match(/\d+/g)); // ["2019", "30", "2020"]
 ````
 let string = "love";
 console.log(string.repeat(10)); // lovelovelovelovelovelovelovelovelovelove
+````
+
+**Проверка типов данных**
+
+````
+console.log(typeof "Asabeneh"); // string
+
+console.log(typeof 10); // number
+console.log(typeof 3.14); // number
+
+console.log(typeof true); // boolean
+console.log(typeof false); // boolean
+
+console.log(typeof NaN); // number
+
+console.log(typeof job); // undefined
+console.log(typeof undefined); // undefined
+
+console.log(typeof null); // object
+````
+
+**Изменение типа данных (Casting)**
+
+*_Строка в число_
+
+parseInt()  
+
+````
+let num = "10";
+let numInt = parseInt(num);
+console.log(numInt); // 10
+````
+
+Number()
+
+````
+let num = "10";
+let numInt = Number(num);
+
+console.log(numInt); // 10
+````
+
+Plus sign(+)
+
+````
+let num = "10";
+let numInt = +num;
+
+console.log(numInt); // 10
+````
+
+*_Строка в число с плавающей запятой_
+
+parseFloat()
+
+````
+let num = "9.81";
+let numFloat = parseFloat(num);
+
+console.log(numFloat); // 9.81
+````
+
+Number()  
+Plus sign(+)
+
+*_Числа с плавающей точкой в целые числа_
+
+parseInt()
+
+````
+let num = 9.81;
+let numInt = parseInt(num);
+
+console.log(numInt); // 9
 ````
