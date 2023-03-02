@@ -37,20 +37,32 @@ console.log(nums == numbers); // false
 **Математический объект**(Math Object- множество методов для работы с числами)
 
 ````
-console.log(Math.round(9.81)); // 10 Округление до ближайшего числа если выше .5 вверх, если меньше 0.5 вниз  
+console.log(Math.round(9.81)); // 10 Округление до ближайшего числа если выше .5 вверх, если меньше 0.5 вниз 
+
 console.log(Math.floor(PI)); // 3 округление вниз  
+
 console.log(Math.ceil(PI)); // 4 округление вверх  
+
 console.log(Math.min(-5, 3, 20, 4, 5, 10)); // -5, возвращает минимальное значение  
+
 console.log(Math.max(-5, 3, 20, 4, 5, 10)); // 20, возвращает максимальное значение  
+
 const randNum = Math.random(); // создаёт случайное число от 0 до 0,999999
 console.log(randNum); //0.26794317623718245  
+
 const num = Math.floor(Math.random() * 11); // создаёт случайное число от 0 до 10  
 console.log(num);  
+
 console.log(Math.abs(-10)); //10 Абсолютное значение  
+
 console.log(Math.sqrt(100)); // 10 Квадратный корень  
+
 console.log(Math.pow(3, 2)); // 9 (3 в квадрате)  
+
 console.log(Math.log(2)); // 0.6931471805599453 Логарифм
+
 console.log(Math.log(10)); // 2.302585092994046 Возвращает натуральный логарифм основания E из x, Math.log(x)  
+
 Math.sin(0); //Тригонометрия
 Math.cos(0);
 ````
@@ -60,7 +72,6 @@ Math.cos(0);
 ````
 let randomNum = Math.random(); // генерирует от 0 до 0,999
 let numBtnZeroAndTen = randomNum * 11;
-
 console.log(numBtnZeroAndTen); // это даёт: мин 0 и макс 10.99
 
 let randomNumRoundToFloor = Math.floor(numBtnZeroAndTen);
@@ -82,9 +93,13 @@ let fullName = firstName + space + lastName;
 
 let fullName = firstName + space + lastName; // конкатенация, объединение двух строк.
 console.log(fullName); // Asabeneh Yetayeh
+
 let personInfoOne = fullName + ". I am " + age + ". I live in " + country;
 console.log(personInfoOne); // Asabeneh Yetayeh. I am 250. I live in Finland
+
 let personInfoTwo = `I am ${fullName}. I am ${age}. I live in ${country}.`; //ES6 - Метод строковой интерполяции
+````
+
 
 **Строковые Методы**
 
